@@ -128,8 +128,19 @@
                <code>event.preventDefault();</code>
              </li>
           </ul>
+          <script>
+          var sayHello = function(event) {
+            console.debug(event);
+            event.preventDefault();
+            window.alert("wazzzzup!");
+          }
+          var link = document.getElementById("hello");
+          link.addEventListener("click", sayHello)
 
-
+          var removeIt = function(event) {
+            event.target.remove();
+          }
+          </script>
         </div>
       </div>
     </div>
